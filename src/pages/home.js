@@ -13,7 +13,7 @@ export const Home = () =>{
     useEffect(()=>{
         const fetchRecipe = async () =>{
             try {
-                const response = await axios.get("https://mern-task-app-api-7ax3.onrender.com/recipes");
+                const response = await axios.get("https://try-try.onrender.com/recipes");
                 setRecipes(response.data);
               } catch (err) {
                   console.error(err);
@@ -22,7 +22,7 @@ export const Home = () =>{
 
         const fetchSavedRecipe = async () =>{
             try {
-                const response = await axios.get(`https://mern-task-app-api-7ax3.onrender.com/recipes/savedRecipes/ids/${userID}`);
+                const response = await axios.get(`https://try-try.onrender.com/recipes/savedRecipes/ids/${userID}`);
                 setSavedRecipes(response.data.savedRecipes);
               } catch (err) {
                   console.error(err);
@@ -36,7 +36,7 @@ export const Home = () =>{
 
     const saveRecipe = async (recipeID) => {
         try {
-            const response = await axios.put("https://mern-task-app-api-7ax3.onrender.com/recipes", {recipeID, userID,},
+            const response = await axios.put("https://try-try.onrender.com/recipes", {recipeID, userID,},
             {headers: {authorization: cookies.access_token}});
             setSavedRecipes(response.data.savedRecipes);
           } catch (err) {

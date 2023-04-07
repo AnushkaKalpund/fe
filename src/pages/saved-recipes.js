@@ -9,7 +9,7 @@ export const SavedRecipes = () =>{
     useEffect(()=>{
         const fetchSavedRecipe = async () =>{
             try {
-                const response = await axios.get(`https://mern-task-app-api-7ax3.onrender.com/recipes/savedRecipes/${userID}`);
+                const response = await axios.get(`https://try-try.onrender.com/recipes/savedRecipes/${userID}`);
                 setSavedRecipes(response.data.savedRecipes);
               } catch (err) {
                   console.error(err);

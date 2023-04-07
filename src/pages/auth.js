@@ -20,7 +20,7 @@ const Login = () =>{
     const onSubmit = async (event) =>{
         event.preventDefault();
         try {
-           const responce = await axios.post("https://mern-task-app-api-7ax3.onrender.com/auth/login", {username, password});
+           const responce = await axios.post("https://try-try.onrender.com/auth/login", {username, password});
           setCookies("access_token", responce.data.token);
           window.localStorage.setItem("userID",responce.data.userID);
           navigate("/");
@@ -46,7 +46,7 @@ const Register = () =>{
     const onSubmit = async (event) =>{
         event.preventDefault();
         try {
-            const responce= await axios.post("https://mern-task-app-api-7ax3.onrender.com/auth/register", {username, password});
+            const responce= await axios.post("https://try-try.onrender.com/auth/register", {username, password});
             window.alert("Registration completed. Now login!"); 
         } catch (err) {
             console.error(err);

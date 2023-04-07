@@ -38,7 +38,7 @@ export const CreateRecipe = () =>{
     const onSubmit = async (event) =>{
         event.preventDefault();
         try {
-          await axios.post("https://mern-task-app-api-7ax3.onrender.com/recipes", recipe, 
+          await axios.post("https://try-try.onrender.com/recipes", recipe, 
           {headers: {authorization: cookies.access_token}});
           alert("Recipe Created");  
           navigate("/");
